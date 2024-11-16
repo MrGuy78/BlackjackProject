@@ -18,10 +18,11 @@ public class Player {
 		hand.clearHand();
 	}
 	
-	private int getHandValue() {
-		hand.getHandValue();
+	public int getHandValue() {
+		return hand.getHandValue();
 	}
-	return int;
+	
+	
 	
 	//NO getHand()
 	//hitMe() or Stand

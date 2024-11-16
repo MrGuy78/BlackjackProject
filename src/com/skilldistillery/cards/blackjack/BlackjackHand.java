@@ -28,6 +28,12 @@ public class BlackjackHand extends AbstractHand {
 		return false;
 	}
 	
-	
+	public void dealerHand() {
+		System.out.print("facedown card, ");
+		for(int i = 1; i < cardsInHand.size(); i++) {
+			System.out.print(cardsInHand.get(i) + ", ");
+		}
+		System.out.println();
+	}
 
 }

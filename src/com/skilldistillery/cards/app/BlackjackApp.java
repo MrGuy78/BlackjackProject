@@ -26,6 +26,16 @@ public class BlackjackApp {
 		
 	}
 	
-	
+	public void showWinner() {
+		if(player.getHandValue() > dealer.getHandValue()) {
+			System.out.println("Winner!");
+		}
+		else if(player.getHandValue() < dealer.getHandValue()) {
+			System.out.println("Loser!");
+		}
+		else {
+			System.out.println("Push!");
+		}
+	}
 
 }

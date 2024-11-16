@@ -21,6 +21,10 @@ public class Dealer extends Player {
 		hand.addCard(card);
 	}
 	
+	public void showHand() {
+		hand.dealerHand();
+	}
+	
 	
 	
 	//hitMe() or stand
