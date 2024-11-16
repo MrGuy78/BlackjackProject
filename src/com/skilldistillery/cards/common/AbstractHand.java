@@ -21,4 +21,9 @@ public abstract class AbstractHand {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "AbstractHand [cardsInHand=" + cardsInHand + "]";
+	}
+
 }

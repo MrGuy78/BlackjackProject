@@ -15,6 +15,9 @@ public class Player {
 	public void hitMe(Card card) {
 		hand.addCard(card);
 	}
-	
 	//NO getHand()
+	//hitMe() or Stand
+	//if playerHand > dealerHand && <= 21
+	//print winner
+	
 }

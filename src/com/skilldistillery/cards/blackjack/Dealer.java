@@ -11,9 +11,14 @@ public class Dealer extends Player {
 		deck = new Deck();
 	}
 	
-	//NO getDeck()
 	public Card dealCard() {
 		return deck.dealCard();
 	}
 	
+	
+	
+	//hitMe() or stand
+	//rule of 17
+	//if dealerHand > playerHand && <= 21
+	//print winner
 }
