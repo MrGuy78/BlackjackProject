@@ -7,12 +7,18 @@ public class Dealer extends Player {
 	
 	private Deck deck;
 	
+	private BlackjackHand hand;
+	
 	public Dealer() {
 		deck = new Deck();
 	}
 	
 	public Card dealCard() {
 		return deck.dealCard();
+	}
+	
+	public void hitMe(Card card) {
+		hand.addCard(card);
 	}
 	
 	

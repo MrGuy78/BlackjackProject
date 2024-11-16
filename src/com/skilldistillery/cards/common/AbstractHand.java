@@ -18,7 +18,7 @@ public abstract class AbstractHand {
 	}
 	
 	public void clearHand() {
-		
+		cardsInHand = new ArrayList<>();
 	}
 
 	@Override

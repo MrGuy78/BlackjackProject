@@ -4,9 +4,7 @@ import com.skilldistillery.cards.common.Card;
 
 public class Player {
 	
-	//FIELDS
 	private BlackjackHand hand;
-	//NO List<Card>
 	
 	public Player() {
 		hand = new BlackjackHand();
@@ -15,6 +13,16 @@ public class Player {
 	public void hitMe(Card card) {
 		hand.addCard(card);
 	}
+	
+	public void newHand() {
+		hand.clearHand();
+	}
+	
+	private int getHandValue() {
+		hand.getHandValue();
+	}
+	return int;
+	
 	//NO getHand()
 	//hitMe() or Stand
 	//if playerHand > dealerHand && <= 21
