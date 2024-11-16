@@ -22,11 +22,8 @@ public class Player {
 		return hand.getHandValue();
 	}
 	
-	
-	
-	//NO getHand()
-	//hitMe() or Stand
-	//if playerHand > dealerHand && <= 21
-	//print winner
+	public void showHand() {
+		System.out.println(hand);
+	}
 	
 }

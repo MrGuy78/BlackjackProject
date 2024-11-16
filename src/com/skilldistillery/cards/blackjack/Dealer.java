@@ -11,6 +11,7 @@ public class Dealer extends Player {
 	
 	public Dealer() {
 		deck = new Deck();
+		hand = new BlackjackHand();
 	}
 	
 	public Card dealCard() {
@@ -21,14 +22,8 @@ public class Dealer extends Player {
 		hand.addCard(card);
 	}
 	
-	public void showHand() {
+	public void showDealerHand() {
 		hand.dealerHand();
 	}
 	
-	
-	
-	//hitMe() or stand
-	//rule of 17
-	//if dealerHand > playerHand && <= 21
-	//print winner
 }
