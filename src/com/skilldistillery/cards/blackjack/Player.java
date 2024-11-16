@@ -4,7 +4,7 @@ import com.skilldistillery.cards.common.Card;
 
 public class Player {
 	
-	private BlackjackHand hand;
+	protected BlackjackHand hand;
 	
 	public Player() {
 		hand = new BlackjackHand();

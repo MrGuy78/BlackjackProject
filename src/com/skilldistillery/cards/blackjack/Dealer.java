@@ -7,11 +7,9 @@ public class Dealer extends Player {
 	
 	private Deck deck;
 	
-	private BlackjackHand hand;
 	
 	public Dealer() {
 		deck = new Deck();
-		hand = new BlackjackHand();
 	}
 	
 	public Card dealCard() {
