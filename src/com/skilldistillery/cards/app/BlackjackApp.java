@@ -24,19 +24,19 @@ public class BlackjackApp {
 		BlackjackApp app = new BlackjackApp();
 		app.startGame();
 	}
-	public void dealStackedDeck() {
-		player.hitMe(new Card(Rank.ACE, Suit.CLUBS));
-		player.hitMe(new Card(Rank.TWO, Suit.CLUBS));
-		
-		
-		dealer.hitMe(new Card(Rank.ACE, Suit.CLUBS));
-		dealer.hitMe(new Card(Rank.JACK, Suit.CLUBS));
-	}
+//	public void dealStackedDeck() {
+//		player.hitMe(new Card(Rank.ACE, Suit.CLUBS));
+//		player.hitMe(new Card(Rank.TWO, Suit.CLUBS));
+//		
+//		
+//		dealer.hitMe(new Card(Rank.ACE, Suit.CLUBS));
+//		dealer.hitMe(new Card(Rank.JACK, Suit.CLUBS));
+//	}
 	
 	public void startGame() {
 		dealer.shuffleDeck();
-//		dealHands();
-		dealStackedDeck();
+		dealHands();
+//		dealStackedDeck();
 		player.showHand();
 		if (player.isBlackjack()) {
 			System.out.println("Blackjack! You win! ");
