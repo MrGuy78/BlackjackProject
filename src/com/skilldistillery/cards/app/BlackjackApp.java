@@ -34,6 +34,7 @@ public class BlackjackApp {
 //	}
 	
 	public void startGame() {
+		System.out.println("Welcome to the SD Blackjack App. ");
 		dealer.shuffleDeck();
 		dealHands();
 //		dealStackedDeck();
