@@ -19,22 +19,8 @@ public class BlackjackApp {
 
 	public static void main(String[] args) {
 		BlackjackApp app = new BlackjackApp();
-		boolean kennyRogersInTheHouse = true;
-		do {
-			System.out.println("Welcome to the SD Blackjack App. "
-					+ "Enter any key to start a game or Q to quit: ");
-			String anyKey = new String();
-			anyKey = kb.next();
-			if(anyKey == "Q") {
-				System.out.println("Why did you even come to a casino? ");
-				break;
-			}
-			else {
-				app.startGame();
-			}
-		}
-		while(kennyRogersInTheHouse);
-		
+		app.run();
+			
 		}
 //	public void dealStackedDeck() {
 //		player.hitMe(new Card(Rank.ACE, Suit.CLUBS));
@@ -44,6 +30,25 @@ public class BlackjackApp {
 //		dealer.hitMe(new Card(Rank.ACE, Suit.CLUBS));
 //		dealer.hitMe(new Card(Rank.JACK, Suit.CLUBS));
 //	}
+	
+	public void run() {
+		boolean kennyRogersInTheHouse = true;
+		do {
+			System.out.println("SD Blackjack App. "
+					+ "Enter any key to start a game or Q to quit: ");
+			String anyKey = new String();
+			anyKey = kb.next();
+			if(anyKey.equalsIgnoreCase("Q")) {
+				System.out.println("Why did you even come to a casino? ");
+				break;
+			}
+			else {
+				startGame();
+				resetGame();
+			}
+		}
+		while(kennyRogersInTheHouse);
+	}
 	
 	public void startGame() {
 		dealer.shuffleDeck();
@@ -61,7 +66,6 @@ public class BlackjackApp {
 	}
 
 	public void playerTurn() {
-
 		player.showHand();
 		System.out.println("Player has " + player.getHandValue() + ". " + "Hit or stay? H or S. ");
 		String hitMe = kb.next();
@@ -117,6 +121,12 @@ public class BlackjackApp {
 		dealer.hitMe(dealer.dealCard());
 		player.hitMe(dealer.dealCard());
 		dealer.hitMe(dealer.dealCard());
+	}
+	
+	public void resetGame() {
+		player.newHand();
+		dealer.newHand();
+		dealer.newDeck();
 	}
 
 }
