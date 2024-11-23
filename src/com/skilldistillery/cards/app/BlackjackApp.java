@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 import com.skilldistillery.cards.blackjack.Dealer;
 import com.skilldistillery.cards.blackjack.Player;
-import com.skilldistillery.cards.common.Card;
-import com.skilldistillery.cards.common.Rank;
-import com.skilldistillery.cards.common.Suit;
 
 public class BlackjackApp {
 
@@ -22,8 +19,23 @@ public class BlackjackApp {
 
 	public static void main(String[] args) {
 		BlackjackApp app = new BlackjackApp();
-		app.startGame();
-	}
+		boolean kennyRogersInTheHouse = true;
+		do {
+			System.out.println("Welcome to the SD Blackjack App. "
+					+ "Enter any key to start a game or Q to quit: ");
+			String anyKey = new String();
+			anyKey = kb.next();
+			if(anyKey == "Q") {
+				System.out.println("Why did you even come to a casino? ");
+				break;
+			}
+			else {
+				app.startGame();
+			}
+		}
+		while(kennyRogersInTheHouse);
+		
+		}
 //	public void dealStackedDeck() {
 //		player.hitMe(new Card(Rank.ACE, Suit.CLUBS));
 //		player.hitMe(new Card(Rank.TWO, Suit.CLUBS));
@@ -34,7 +46,6 @@ public class BlackjackApp {
 //	}
 	
 	public void startGame() {
-		System.out.println("Welcome to the SD Blackjack App. ");
 		dealer.shuffleDeck();
 		dealHands();
 //		dealStackedDeck();
